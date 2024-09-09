@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | FarmLink</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url(c:/Users/ALBIN/Downloads/farmingimg3.jpg);
+        }
+
+    </style>
+      
+</head>
+<body>
+    <header>
+        <h1>FarmLink</h1>
+        <br>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="contract.html">Contract</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href= "login.html">Login</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Welcome to FarmLink</h2>
+            <p style="color: black;">
+             At FarmLink, we are committed to revolutionizing the agricultural landscape by fostering mutually beneficial partnerships between farmers and buyers through secure contract farming agreements. Our primary goal is to provide farmers with guaranteed market access and stable prices, ensuring a dependable income stream while reducing the financial risks that come with unpredictable market fluctuations and changing weather conditions.
+             </p>
+             <p style="color: black">
+             Our website facilitates transparent payment systems, enabling timely and fair transactions. Additionally, it offers tools for monitoring crop quality, tracking deliveries, and managing contracts efficiently. Buyers also benefit from consistent supply chains, ensuring they receive high-quality produce directly from trusted farmers. This creates a seamless and trustworthy ecosystem for agricultural commerce.
+            </p>
+    
+
+                        
+
+        </main>
+        
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeRegister">&times;</span>
+                <h2>Create an Account</h2>
+                <form action="#" method="POST">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required> <br><br>
+                    <label for="Retype password">Retype Password:</label>
+                    <input type="Retype password" id="Retype password" name="Retype password" required> <br><br>
+                    <label for="I'am a">I'am a:</label>
+                     <select>
+                        <option>Farmer</option>
+                        <option>Buyer</option>
+                     </select> <br><br>
+                    <label for="Phone number">Phone number:</label>
+                    <input type="Phone number" id="Phone number" name="Phone number" required> <br><br>
+                    
+                    <label for="Profile photo">Profile photo:</label>&nbsp;...................................
+                    <input type="Profile photo" id="Profile photo" name="Profile photo" required>
+                    <input type="file">  <br><br>
+                    <label for="Address">Address:</label>
+                    <textarea id="message" name="Address" rows="2" required></textarea><br>
+                    <label for="ID proof">ID proof:</label>
+                    <select>
+                        <option>Pan card</option>
+                        <option>Aadhar Card</option>
+                        <option>Driving License</option>
+                        <option>Voter ID card</option>
+                     </select> <br><br>
+                     <label for="ID Proof number">ID proof number:</label>
+                    <input type="ID Proof number" id="ID Proof number" name="ID Proof number" required> <br><br>
+                    <label for="state">Select State:</label>
+                    <select id="state" name="state" onchange="populateDistricts()">
+                        <option value="">--Select State--</option>
+                        <option value="ANDAMAN & NICOBAR">ANDAMAN & NICOBAR</option>
+                        <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
+                        <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
+                        <option value="ASSAM">ASSAM</option>
+                        <option value="BIHAR">BIHAR</option>
+                        <option value="CHANDIGARH">CHANDIGARH</option>
+                        <option value="CHHATTISGARH">CHHATTISGARH</option>
+                        <option value="DADRA & NAGAR">DADRA & NAGAR</option>
+                        <option value="DAMAN & DIU">DAMAN & DIU</option>
+                        <option value="DELHI">DELHI</option>
+                        <option value="GOA">GOA</option>
+                        <option value="GUJARAT">GUJARAT</option>
+                        <option value="HARYANA">HARYANA</option>
+                        <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
+                        <option value="JAMMU & KASHMIR">JAMMU & KASHMIR</option>
+                        <option value="JHARKHAND">JHARKHAND</option>
+                        <option value="KARNATAKA">KARNATAKA</option>
+                        <option value="KERALA">KERALA</option>
+                        <option value="LAKSHADWEEP">LAKSHADWEEP</option>
+                        <option value="MADHYA PRADESH">MADHYA PRADESH</option>
+                        <option value="MAHARASHTRA">MAHARASHTRA</option>
+                        <option value="MANIPUR">MANIPUR</option>
+                        <option value="MEGHALAYA">MEGHALAYA</option>
+                        <option value="MIZORAM">MIZORAM</option>
+                        <option value="NAGALAND">NAGALAND</option>
+                        <option value="ODISHA">ODISHA</option>
+                        <option value="PONDICHERRY">PONDICHERRY</option>
+                        <option value="PUNJAB">PUNJAB</option>
+                        <option value="RAJASTHAN">RAJASTHAN</option>
+                        <option value="SIKKIM">SIKKIM</option>
+                        <option value="TAMIL NADU">TAMIL NADU</option>
+                        <option value="TELANGANA">TAMIL NADU</option>
+                        <option value="TRIPURA">TRIPURA</option>
+                        <option value="UTTAR PRADESH">UTTAR PRADESH</option>
+                        <option value="UTTARAKHAND">UTTARAKHAND</option>
+                        <option value="WEST BENGAL">WEST BENGAL</option>
+                    </select> <br><br>
+                
+                    <!-- District Dropdown -->
+                    <label for="district">Select District:</label>
+                    <select id="district" name="district">
+                        <option value="">--Select District--</option>
+                    </select>
+                
+                    <script>
+                        // Object containing state-district pairs
+                        const stateDistricts = {
+                            "ANDAMAN & NICOBAR": ["Nicobar", "North and middle Andaman", "south Andaman"],
+                            "ANDHRA PRADESH": ["Alluri Sitharama Raju" , "Anakapalli" , "Anantapuram" , "Annamayya" , "Bapatla" , "Chittoor" , "EastGodavari" , "Eluru" , "Guntur" , "Kakinada" , "Konaseema" , "Krishna" , "Kurnool" , "Nandyal" , "NTR" , "Palnadu" , "Parvathipuramu Manyam" , "Prakasam" , "Sri Potti Sriramulu Nellore" , "Sri Sathya Sai" , "Srikakulam" , "Tirupati"	, "Visakhapatnam" , "Vizianagaram" , "West Godavari" , "YSR Kadapa"],
+                            "ARUNACHAL PRADESH": [
+        "Tawang",
+        "West Kameng",
+        "East Kameng",
+        "Papum Pare",
+        "Kurung Kumey",
+        "Kra Daadi",
+        "Lower Subansiri",
+        "Upper Subansiri",
+        "West Siang",
+        "East Siang",
+        "Siang",
+        "Upper Siang",
+        "Lower Siang",
+        "Lower Dibang Valley",
+        "Dibang Valley",
+        "Anjaw",
+        "Lohit",
+        "Namsai",
+        "Changlang",
+        "Tirap",
+        "Longding",
+        "Pakke-Kessang",
+        "Lepa Rada",
+        "Shi Yomi",
+        "Kamle"
+    ],
+
+    "ASSAM": [
+    "Baksa",
+    "Barpeta",
+    "Biswanath",
+    "Bongaigaon",
+    "Cachar",
+    "Charaideo",
+    "Chirang",
+    "Darrang",
+    "Dhemaji",
+    "Dhubri",
+    "Dibrugarh",
+    "Goalpara",
+    "Golaghat",
+    "Hailakandi",
+    "Hojai",
+    "Jorhat",
+    "Kamrup",
+    "Kamrup Metropolitan",
+    "Karbi Anglong",
+    "Karimganj",
+    "Kokrajhar",
+    "Lakhimpur",
+    "Majuli",
+    "Morigaon",
+    "Nagaon",
+    "Nalbari",
+    "Dima Hasao",
+    "Sivasagar",
+    "Sonitpur",
+    "South Salmara-Mankachar",
+    "Tinsukia",
+    "Udalguri",
+    "West Karbi Anglong"
+],
+"BIHAR": [
+                "Araria", "Arwal", "Aurangabad", "Banka", "Begusarai", "Bhagalpur", "Bhojpur", 
+                "Buxar", "Darbhanga", "East Champaran", "Gaya", "Gopalganj", "Jamui", 
+                "Jehanabad", "Kaimur", "Katihar", "Khagaria", "Kishanganj", "Lakhisarai", 
+                "Madhepura", "Madhubani", "Munger", "Muzaffarpur", "Nalanda", "Nawada", 
+                "Patna", "Purnia", "Rohtas", "Saharsa", "Samastipur", "Saran", "Sheikhpura", 
+                "Sheohar", "Sitamarhi", "Siwan", "Supaul", "Vaishali", "West Champaran"
+            ],
+"CHHATTISGARH": [
+                "Balod", "Baloda Bazar", "Balrampur", "Bastar", "Bemetara", 
+                "Bijapur", "Bilaspur", "Dantewada (South Bastar)", "Dhamtari", 
+                "Durg", "Gariaband", "Gaurela Pendra Marwahi", "Janjgir-Champa", 
+                "Jashpur", "Kabirdham (Kawardha)", "Kanker (North Bastar)", 
+                "Kondagaon", "Korba", "Koriya", "Mahasamund", "Mungeli", 
+                "Narayanpur", "Raigarh", "Raipur", "Rajnandgaon", "Sukma", 
+                "Surajpur", "Surguja"
+            ],
+"DAMAN & DIU": ["Daman","diu"],
+"DELHI": [
+                "Central Delhi",
+                "East Delhi",
+                "New Delhi",
+                "North Delhi",
+                "North East Delhi",
+                "North West Delhi",
+                "Shahdara",
+                "South Delhi",
+                "South East Delhi",
+                "South West Delhi",
+                "West Delhi"
+            ],
+"GOA": ["North Goa","South Goa"],
+"GUJARAT": [
+                "Ahmedabad", "Amreli", "Anand", "Aravalli", "Banaskantha",
+                "Bharuch", "Bhavnagar", "Botad", "Chhota Udaipur", "Dahod",
+                "Dang", "Devbhoomi Dwarka", "Gandhinagar", "Gir Somnath", 
+                "Jamnagar", "Junagadh", "Kheda", "Kutch", "Mahisagar", 
+                "Mehsana", "Morbi", "Narmada", "Navsari", "Panchmahal", 
+                "Patan", "Porbandar", "Rajkot", "Sabarkantha", "Surat", 
+                "Surendranagar", "Tapi", "Vadodara", "Valsad"
+            ],
+"HARYANA": [
+    "Ambala",
+    "Bhiwani",
+    "Charkhi Dadri",
+    "Faridabad",
+    "Fatehabad",
+    "Gurgaon (Gurugram)",
+    "Hisar",
+    "Jhajjar",
+    "Jind",
+    "Kaithal",
+    "Karnal",
+    "Kurukshetra",
+    "Mahendragarh",
+    "Mewat",
+    "Palwal",
+    "Panchkula",
+    "Panipat",
+    "Rewari",
+    "Sirsa",
+    "Sonipat",
+    "Yamunanagar"
+],
+"HIMACHAL PRADESH": [
+    "Bilaspur",
+    "Chamba",
+    "Hamirpur",
+    "Kangra",
+    "Kinnaur",
+    "Kullu",
+    "Lahaul and Spiti",
+    "Mandi",
+    "Shimla",
+    "Sirmaur",
+    "Solan",
+    "Una"
+],
+"JAMMU & KASHMIR": [
+    "Anantnag",
+    "Bandipora",
+    "Baramulla",
+    "Budgam",
+    "Doda",
+    "Ganderbal",
+    "Jammu",
+    "Kathua",
+    "Kishtwar",
+    "Kulgam",
+    "Poonch",
+    "Pulwama",
+    "Rajouri",
+    "Ramban",
+    "Reasi",
+    "Samba",
+    "Shopian",
+    "Srinagar",
+    "Udhampur"
+],
+"JHARKHAND": [
+    "Bokaro",
+    "Chatra",
+    "Deoghar",
+    "Dhanbad",
+    "Dumka",
+    "East Singhbhum",
+    "Garhwa",
+    "Giridih",
+    "Godda",
+    "Gumla",
+    "Hazaribagh",
+    "Jamtara",
+    "Khunti",
+    "Koderma",
+    "Latehar",
+    "Lohardaga",
+    "Pakur",
+    "Palamu",
+    "Ranchi",
+    "Sahibganj",
+    "Seraikela-Kharsawan",
+    "Simdega",
+    "West Singhbhum"
+],
+"KARNATAKA": ["Bagalkote",
+    "Ballari",
+    "Belagavi",
+    "Bengaluru Rural",
+    "Bengaluru Urban",
+    "Bidar",
+    "Chamarajanagar",
+    "Chikkaballapur",
+    "Chikkamagaluru",
+    "Chitradurga",
+    "Dakshina Kannada",
+    "Davanagere",
+    "Dharwad",
+    "Gadag",
+    "Gulbarga",
+    "Hassan",
+    "Haveri",
+    "Kodagu",
+    "Kolar",
+    "Koppal",
+    "Mandya",
+    "Mysuru",
+    "Raichur",
+    "Ramanagara",
+    "Shimoga",
+    "Tumakuru",
+    "Udupi",
+    "Uttara Kannada",
+    "Vijayapura",
+    "Yadgir"
+],
+KERALA: ["Alappuzha",
+    "Ernakulam",
+    "Idukki",
+    "Kannur",
+    "Kasaragod",
+    "Kollam",
+    "Kottayam",
+    "Kozhikode",
+    "Malappuram",
+    "Palakkad",
+    "Pathanamthitta",
+    "Thrissur",
+    "Wayanad"
+],
+"LAKSHADWEEP": [
+    "Kavaratti",
+    "Agatti",
+    "Amini",
+    "Androth",
+    "Bangaram",
+    "Bithra",
+    "Kalapeni",
+    "Kiltan",
+    "Kochi",
+    "Madhyapath",
+    "Maliku",
+    "Minicoy",
+    "Suheli Parali",
+    "Suheli Parali Atoll"
+],
+"MADHYA PRADESH": ["Agar Malwa", "Alirajpur", "Anuppur", "Ashok Nagar", "Balaghat", "Barwani", 
+    "Betul", "Bhind", "Bhopal", "Burhanpur", "Chhindwara", "Dewas", 
+    "Dhar", "Dindori", "Guna", "Gwalior", "Harda", "Hoshangabad", 
+    "Indore", "Jabalpur", "Jhabua", "Katni", "Khandwa", "Khurai", 
+    "Mandla", "Mandsaur", "Morena", "Narsinghpur", "Nawapara", "Panna", 
+    "Raisen", "Raja Bhoj", "Rajgarh", "Ratlam", "Rewa", "Sagar", 
+    "Satna", "Sehore", "Seoni", "Shahdol", "Shajapur", "Sheopur", 
+    "Siddhi", "Singrauli", "Tikamgarh", "Ujjain", "Umaria", "Vidisha"
+],
+"MAHARASHTRA": ["Ahmednagar",
+    "Akola",
+    "Amravati",
+    "Aurangabad",
+    "Beed",
+    "Bhandara",
+    "Buldhana",
+    "Chandrapur",
+    "Dhule",
+    "Gadchiroli",
+    "Gondia",
+    "Hingoli",
+    "Jalgaon",
+    "Jalna",
+    "Kolhapur",
+    "Latur",
+    "Mumbai City",
+    "Mumbai Suburban",
+    "Nagpur",
+    "Nanded",
+    "Nandurbar",
+    "Nashik",
+    "Osmanabad",
+    "Palghar",
+    "Parbhani",
+    "Pune",
+    "Raigad",
+    "Ratnagiri",
+    "Satara",
+    "Sindhudurg",
+    "Solapur",
+    "Thane",
+    "Wardha",
+    "Washim",
+    "Yavatmal"],
+"MANIPUR": [
+    "Imphal East",
+    "Imphal West",
+    "Bishnupur",
+    "Thoubal",
+    "Churachandpur",
+    "Chandel",
+    "Tamenglong",
+    "Senapati",
+    "Ukhrul",
+    "Jiribam",
+    "Kakching",
+    "Pherzawl",
+    "Kamjong",
+    "Noney",
+    "Tengnoupal",
+    "Purel"
+],
+"MEGHALAYA": [
+    "East Khasi Hills",
+    "West Khasi Hills",
+    "South West Khasi Hills",
+    "Jaintia Hills",
+    "West Jaintia Hills",
+    "East Jaintia Hills",
+    "Ri-Bhoi",
+    "South Garo Hills",
+    "West Garo Hills",
+    "North Garo Hills",
+    "South West Garo Hills",
+    "West South Garo Hills"
+],
+"MIZORAM":[
+        "Aizawl",
+        "Champhai",
+        "Kolasib",
+        "Lawngtlai",
+        "Lunglei",
+        "Mamit",
+        "Serchhip"
+    ],
+
+    "NAGALAND": [
+        "Dimapur",
+        "Kiphire",
+        "Kohima",
+        "Longleng",
+        "Mokokchung",
+        "Mon",
+        "Peren",
+        "Phek",
+        "Tuensang",
+        "Wokha",
+        "Zunheboto"
+    ],
+"ODISHA": [
+    "Angul",
+    "Balangir",
+    "Baleswar",
+    "Bargarh",
+    "Bhadrak",
+    "Boudh",
+    "Cuttack",
+    "Dhenkanal",
+    "Gajapati",
+    "Ganjam",
+    "Jagatsinghpur",
+    "Jajpur",
+    "Jeypore",
+    "Kalahandi",
+    "Kandhamal",
+    "Kendrapara",
+    "Kendujhar",
+    "Khurda",
+    "Koraput",
+    "Nabarangpur",
+    "Nayagarh",
+    "Nuapada",
+    "Rayagada",
+    "Sambalpur",
+    "Subarnapur",
+    "Sundargarh"
+  ],
+  "PONDICHERRY": [
+    "Karaikal",
+    "Mahe",
+    "Puducherry",
+    "Yanam"
+  ],
+
+  "PUNJAB": [
+    "Amritsar",
+    "Barnala",
+    "Bathinda",
+    "Faridkot",
+    "Fatehgarh Sahib",
+    "Fazilka",
+    "Gurdaspur",
+    "Hoshiarpur",
+    "Jalandhar",
+    "Kapurthala",
+    "Ludhiana",
+    "Mansa",
+    "Moga",
+    "Muktsar",
+    "Nawanshahr",
+    "Pathankot",
+    "Patiala",
+    "Rupnagar",
+    "Sangrur",
+    "Shaheed Bhagat Singh Nagar",
+    "Sri Muktsar Sahib",
+    "Tarntaran"
+  ],
+  "RAJASTHAN":[
+    "Ajmer",
+    "Alwar",
+    "Banswara",
+    "Baran",
+    "Barmer",
+    "Bharatpur",
+    "Bhilwara",
+    "Bikaner",
+    "Bundi",
+    "Chittorgarh",
+    "Churu",
+    "Dausa",
+    "Dholpur",
+    "Dungarpur",
+    "Hanumangarh",
+    "Jaipur",
+    "Jaisalmer",
+    "Jalore",
+    "Jhalawar",
+    "Jhunjhunu",
+    "Jodhpur",
+    "Karauli",
+    "Kota",
+    "Nagaur",
+    "Pali",
+    "Rajsmand",
+    "Sawai Madhopur",
+    "Sikar",
+    "Sirohi",
+    "Tonk",
+    "Udaipur"
+],
+"SIKKIM": [
+    "East Sikkim",
+    "West Sikkim",
+    "North Sikkim",
+    "South Sikkim"
+],
+
+"TAMIL NADU": [
+    "Chennai",
+    "Coimbatore",
+    "Cuddalore",
+    "Dharmapuri",
+    "Dindigul",
+    "Kanchipuram",
+    "Kanyakumari",
+    "Karur",
+    "Krishnagiri",
+    "Madurai",
+    "Nagapattinam",
+    "Namakkal",
+    "Perambalur",
+    "Pudukkottai",
+    "Ramanathapuram",
+    "Salem",
+    "Sivaganga",
+    "Thanjavur",
+    "The Nilgiris",
+    "Theni",
+    "Tiruchirappalli",
+    "Tirunelveli",
+    "Tirupur",
+    "Tiruvallur",
+    "Tiruvannamalai",
+    "Vellore",
+    "Viluppuram",
+    "Virudhunagar"
+],
+"TELANGANA": [
+    "Adilabad",
+    "Bhadradri Kothagudem",
+    "Hyderabad",
+    "Jagtial",
+    "Jangaon",
+    "Jayashankar Bhupalpally",
+    "Jogulamba Gadwal",
+    "Kamareddy",
+    "Karimnagar",
+    "Khammam",
+    "Komaram Bheem Asifabad",
+    "Mahabubabad",
+    "Mahabubnagar",
+    "Mancherial",
+    "Medak",
+    "Medchal-Malkajgiri",
+    "Nalgonda",
+    "Nirmal",
+    "Nizamabad",
+    "Peddapalli",
+    "Rajanna Sircilla",
+    "Rangareddy",
+    "Sangareddy",
+    "Warangal (Rural)",
+    "Warangal (Urban)",
+    "Wanaparthy",
+    "Yadadri Bhuvanagiri"
+],
+
+"TRIPURA": [
+    "Dhalai",
+    "Gomati",
+    "Khowai",
+    "North Tripura",
+    "Sepahijala",
+    "South Tripura",
+    "Unakoti",
+    "West Tripura"
+],
+"UTTAR PRADESH":[
+    "Agra",
+    "Aligarh",
+    "Ambedkar Nagar",
+    "Amethi",
+    "Amroha",
+    "Auraiya",
+    "Ayodhya",
+    "Azamgarh",
+    "Badaun",
+    "Baghpat",
+    "Bahraich",
+    "Ballia",
+    "Balrampur",
+    "Banda",
+    "Bangarmau",
+    "Bareilly",
+    "Basti",
+    "Bhadohi",
+    "Bijnor",
+    "Budaun",
+    "Bulandshahr",
+    "Chandauli",
+    "Chitrakoot",
+    "Deoria",
+    "Etah",
+    "Etawah",
+    "Faizabad",
+    "Farrukhabad",
+    "Fatehpur",
+    "Fatehgarh",
+    "Gautam Buddh Nagar",
+    "Ghaziabad",
+    "Ghazipur",
+    "Gonda",
+    "Gorakhpur",
+    "Hamirpur",
+    "Hardoi",
+    "Hathras",
+    "Jalaun",
+    "Jaunpur",
+    "Jhansi",
+    "Jhansi",
+    "Kannauj",
+    "Kanpur",
+    "Kanshiram Nagar",
+    "Kaushambi",
+    "Kheri",
+    "Kushinagar",
+    "Lakhimpur Kheri",
+    "Lucknow",
+    "Maharajganj",
+    "Mahoba",
+    "Mainpuri",
+    "Mathura",
+    "Mau",
+    "Meerut",
+    "Mirzapur",
+    "Moradabad",
+    "Muzaffarnagar",
+    "Pilibhit",
+    "Pratapgarh",
+    "Raebareli",
+    "Rampur",
+    "Saharanpur",
+    "Sambhal",
+    "Sant Kabir Nagar",
+    "Shahjahanpur",
+    "Shamli",
+    "Shravasti",
+    "Siddharthnagar",
+    "Sitapur",
+    "Sonbhadra",
+    "Sultanpur",
+    "Unnao",
+    "Varanasi"
+  ],
+  "UTTARAKHAND": [
+    "Almora",
+    "Bageshwar",
+    "Bharatpur",
+    "Chamoli",
+    "Champawat",
+    "Dehradun",
+    "Haridwar",
+    "Nainital",
+    "Pauri Garhwal",
+    "Pithoragarh",
+    "Rudraprayag",
+    "Tehri Garhwal",
+    "Udham Singh Nagar",
+    "Uttarkashi"
+  ],
+  "WEST BENGAL": [
+    "Alipurduar",
+    "Bankura",
+    "Bardhaman",
+    "Birbhum",
+    "Bishnupur",
+    "Darjeeling",
+    "Dakshin Dinajpur",
+    "Hooghly",
+    "Howrah",
+    "Jalpaiguri",
+    "Jhargram",
+    "Kolkata",
+    "Malda",
+    "Murshidabad",
+    "Nadia",
+    "North 24 Parganas",
+    "Paschim Medinipur",
+    "Paschim Bardhaman",
+    "Purba Medinipur",
+    "Purulia",
+    "South 24 Parganas",
+    "Uttar Dinajpur"
+  ],
+                        };
+                        function populateDistricts() {
+                            const stateSelect = document.getElementById("state");
+                            const districtSelect = document.getElementById("district");
+                            const selectedState = stateSelect.value;
+                
+                            // Clear previous district options
+                            districtSelect.innerHTML = '<option value="">--Select District--</option>';
+                
+                            // Check if a valid state is selected
+                            if (selectedState && stateDistricts[selectedState]) {
+                                const districts = stateDistricts[selectedState];
+                
+                                // Populate the district dropdown with options based on the selected state
+                                districts.forEach(function(district) {
+                                    const option = document.createElement("option");
+                                    option.value = district;
+                                    option.text = district;
+                                    districtSelect.add(option);
+                                });
+                            }
+                        }
+                    </script> <br><br>
+                    
+                    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(c:/Users/ALBIN/Downloads/farmingimg3.jpg);
+        
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #registerBtn {
+            background-color: #e6dbdb;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: not-allowed;
+        }
+
+        #registerBtn.enabled {
+            background-color: #4682B4;
+            cursor: pointer;
+        }
+
+        .note {
+            color: red;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .login-link {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .login-link a {
+            color: #4682B4;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form>
+        <label>
+            <input type="checkbox" id="termsCheckbox">
+            I have read and understood the terms and conditions*
+        </label>
+
+        <button type="button" id="registerBtn" disabled>Register Account</button>
+
+        <p class="note">After telephone verification the above button will be enabled</p>
+
+        <div class="login-link">
+             <a href="login.html">Already have an account? Login</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    const termsCheckbox = document.getElementById('termsCheckbox');
+    const registerBtn = document.getElementById('registerBtn');
+
+    termsCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            registerBtn.disabled = false;
+            registerBtn.classList.add('enabled');
+        } else {
+            registerBtn.disabled = true;
+            registerBtn.classList.remove('enabled');
+        }
+    });
+</script>
+
+</body>
+</html>
+                    
+                     
+                </form>
+            </div>
+        </div>
+    
+
+    </header>
+    
+    <footer>
+        <p>&copy; 2024 FarmLink. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Example</title>
+    <style>
+        /* General footer styling */
+        footer {
+            background-color: #333; /* Dark background color */
+            color: white; /* Text color */
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        /* Footer columns */
+        .footer-column {
+            flex-basis: 30%;
+            padding: 20px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffc107; /* Optional color for headings */
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Copyright section */
+        .copyright {
+            text-align: center;
+            padding: 10px;
+            background-color: #222;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <footer>
+        <!-- Contact Section -->
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="#">Contact Form</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Help Center</a></li>
+            </ul>
+        </div>
+
+    
+        </div>
+
+        <!-- Policy Section -->
+        <div class="footer-column">
+            <h3>Policy</h3>
+            <ul>
+                <li><a href="terms and cond.html">Terms and Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Return and Refund Policy</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Disclaimer</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Copyright Section -->
+    <div class="copyright">
+        Copyright © Sumant Cloud
+    </div>
+
+</body>
+</html>
+</html>
